@@ -1,0 +1,23 @@
+{
+  "name": "hackernews-node-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tyguy160/hackernews-node-tutorial.git"
+  },
+  "keywords": [],
+  "author": "Tyler Maschino <tylermaschino@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tyguy160/hackernews-node-tutorial/issues"
+  },
+  "homepage": "https://github.com/Tyguy160/hackernews-node-tutorial#readme",
+  "dependencies": {
+    "graphql-yoga": "^1.16.9"
+  }
+}
