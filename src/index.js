@@ -24,21 +24,25 @@ const resolvers = {
       return link;
     },
     updateLink: (parent, args) => {
-      const link = links.filter(link => {
-        const updatedlink = {
-          id: args.id,
-          description: args.description ? args.description : link.description,
-          url: args.url ? args.url : link.url,
-        };
+      const link = links.filter((link, index) => {
+        // Update the link
         if (link.id === args.id) {
           link.description = args.description
             ? args.description
             : link.description;
           link.url = args.url ? args.url : link.url;
         }
-        return link;
+        return link.id === args.id;
       });
-      console.log(link);
+      return link[0];
+    },
+    deleteLink: (parent, args) => {
+      const link = links.filter((link, index) => {
+        if (link.id === args.id) {
+          links.splice(index, 1);
+        }
+        return link.id === args.id;
+      });
       return link[0];
     },
   },
